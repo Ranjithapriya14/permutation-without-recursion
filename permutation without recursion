@@ -1,0 +1,12 @@
+def permute(num):
+    rp=[[]]
+    for n in num:
+        np=[]
+        for p in rp:
+            for i in range(len(p)+1):
+                np.append(p[:i]+[n]+p[i:])
+                rp=np
+                return rp
+nums=[1,4,8]
+print(nums)
+print("\n",permute(nums))
